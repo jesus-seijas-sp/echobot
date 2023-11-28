@@ -39,7 +39,7 @@ class Bot extends ActivityHandler {
   registerEvents() {
     this.onMessage(async (context, next) => {
       const replyText = `Echo: ${ context.activity.text }`;
-      await context.sendActivity(MessageFactory.text(replyText, replyText));
+      await context.sendActivity(MessageFactory.text(replyText));
       await next();
     });
 
